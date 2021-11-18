@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_my_insurance"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:fillViewport="true"
+        tools:listitem="@layout/fragment_my_insurance_list_"
+        android:orientation="vertical">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/text_no_insurance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No Insurance Yet"
+        android:textAlignment="center"
+        android:textAllCaps="false" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/BuyMoreInsurance_button"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/buy_more_insurance"
+            android:textColor="#00B8CC"
+            android:textSize="16sp"
+            app:backgroundTint="#FFFFFF"
+            tools:layout_editor_absoluteX="78dp"
+            tools:layout_editor_absoluteY="469dp" />
+    </LinearLayout>
+</LinearLayout>

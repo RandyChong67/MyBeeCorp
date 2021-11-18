@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical"
+    tools:context=".EditItemCoveredListFragment">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="10dp"
+        tools:ignore="UselessParent">
+
+        <CheckBox
+            android:id="@+id/optionEditItemCovered_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|start" />
+
+        <TextView
+            android:id="@+id/itemCoveredName_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.9"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            tools:text="XXX - Name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center_vertical"
+            android:layout_weight="0.1"
+            android:text="@string/rm"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/itemCoveredPrice_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_weight="0.1"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center_vertical"
+            android:textAlignment="textStart"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            tools:ignore="RtlCompat"
+            tools:text="XXX - Price" />
+    </TableRow>
+</LinearLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mybeecorp">
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/mybeecorpyellow"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/mybeecorpyellow"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyBeeCorp">
+        <activity android:name=".superadmin.activities.AddVehicleVariant"></activity>
+        <activity android:name=".superadmin.activities.AddVehicleModel" />
+        <activity android:name=".superadmin.activities.AddVehicleBrand" />
+        <activity android:name=".superadmin.activities.AddVehicleType" />
+        <activity android:name=".insurancecompanyadmin.activities.EditMyCompanyCA" />
+        <activity android:name=".member.activities.ViewMyVehicleActivity" />
+        <activity android:name=".superadmin.activities.EditPrizesActivity" />
+        <activity android:name=".superadmin.activities.EditVehicleVariantActivity" />
+        <activity android:name=".superadmin.activities.EditVehicleModelActivity" />
+        <activity android:name=".superadmin.activities.EditVehicleBrandActivity" />
+        <activity android:name=".superadmin.activities.EditVehicleTypeActivity" />
+        <activity
+            android:name=".activities.ForgotPasswordActivity"
+            android:theme="@style/Theme.MyBeeCorpNoActionBar" />
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:theme="@style/Theme.MyBeeCorpNoActionBar" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:theme="@style/Theme.MyBeeCorpNoActionBar" />
+        <activity android:name=".superadmin.activities.InsertValueToSpinWheelActivity" />
+        <activity android:name=".superadmin.activities.EditSpinWheelActivity" />
+        <activity
+            android:name=".member.activities.PaymentSuccessfulActivity"
+            android:theme="@style/Theme.MyBeeCorpNoActionBar" />
+        <activity android:name=".member.activities.PaymentGatewayActivity" />
+        <activity android:name=".insurancecompanyadmin.activities.InsuranceCompanyAdminMainActivity" />
+        <activity
+            android:name=".activities.LandingPageActivity"
+            android:theme="@style/Theme.MyBeeCorpNoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".insurancecompanyadmin.activities.ViewMemberVehicle" />
+        <activity android:name=".insurancecompanyadmin.activities.MemberVehicleDetailActivity" />
+        <activity android:name=".superadmin.activities.ViewVehicleActivity" />
+        <activity android:name=".superadmin.activities.VehicleSettingsActivity" />
+        <activity android:name=".superadmin.activities.VehicleDetailActivity" />
+        <activity android:name=".superadmin.activities.SuperAdminMainActivity" />
+        <activity android:name=".member.activities.ViewSpinWheel" />
+        <activity android:name=".member.activities.MemberMainActivity" />
+        <activity android:name=".member.activities.MyVehicleDetailActivity" /> <!-- yang loo -->
+        <activity android:name=".member.activities.MemberReferralDetails" />
+        <activity android:name=".member.fragments.MemberReferralList" />
+        <activity android:name=".insurancecompanyadmin.fragments.InsuranceCompanyAdminMemberList" />
+        <activity android:name=".member.fragments.MemberMyProfile" />
+        <activity android:name=".insurancecompanyadmin.fragments.InsuranceCompanyAdminMyProfile" />
+        <activity android:name=".superadmin.fragments.SuperAdminMyProfile" />
+        <activity android:name=".superadmin.activities.MemberUserProfile" />
+        <activity android:name=".superadmin.activities.SuperAdminUserRoleList" />
+        <activity android:name=".superadmin.fragments.SuperAdminUserProfile" />
+        <activity android:name=".superadmin.activities.SuperAdminUserList" />
+        <activity android:name=".superadmin.activities.InsuranceCompanyAdminUserProfile" /> <!-- theng pan -->
+        <activity android:name=".member.activities.ValidateInsuranceDetailActivity" />
+        <activity android:name=".member.activities.FillInVehicleDetails" />
+        <activity android:name=".member.activities.SelectItemCovered" />
+        <activity android:name=".member.activities.ViewMoreCompanyInsurance" />
+        <activity android:name=".member.activities.InsuranceCompany_MainPage" />
+        <activity android:name=".member.activities.MyInsurance_MainPage" />
+        <activity android:name=".member.activities.ViewDetail_InsuranceInformation" />
+        <activity android:name=".insurancecompanyadmin.activities.DeleteInsuranceCA" />
+        <activity
+            android:name=".insurancecompanyadmin.activities.EditMyCompany"
+            android:label="@string/title_activity_edit_my_company"
+            android:theme="@style/Theme.MyBeeCorpNoActionBar" />
+        <activity android:name=".insurancecompanyadmin.activities.InsCompanyCAMainPage" />
+        <activity android:name=".insurancecompanyadmin.activities.EditInsuranceCA" />
+        <activity android:name=".insurancecompanyadmin.activities.ViewInsuranceInformationCA" />
+        <activity android:name=".insurancecompanyadmin.activities.AddInsuranceCA" />
+        <activity android:name=".insurancecompanyadmin.activities.InsuranceCAMainPage" />
+        <activity android:name=".superadmin.activities.EditInsCompanySuperAdmin" />
+        <activity android:name=".superadmin.activities.ViewInsCompanySuperAdmin" />
+        <activity android:name=".superadmin.activities.DeleteInsCompanySuperAdmin" />
+        <activity android:name=".superadmin.activities.AddInsCompanySuperAdmin" />
+        <activity android:name=".superadmin.activities.InsCompanySuperAdminMainPage" />
+        <activity android:name=".superadmin.activities.EditInsuranceSuperAdmin" />
+        <activity android:name=".superadmin.activities.DeleteInsuranceSuperAdmin" />
+        <activity android:name=".superadmin.activities.ViewInsuranceInformationSuperAdmin" />
+        <activity android:name=".superadmin.activities.AddInsuranceSuperAdmin" />
+        <activity android:name=".superadmin.activities.InsuranceSuperAdminMainPage" /> <!--  -->
+        <activity android:name=".superadmin.activities.Update_Reward" />
+        <activity android:name=".superadmin.activities.Create_Reward" />
+        <activity android:name=".superadmin.activities.View_Reward" />
+        <activity android:name=".superadmin.activities.Update_Voucher" />
+        <activity android:name=".superadmin.activities.View_Voucher" />
+        <activity android:name=".superadmin.activities.Create_Voucher" />
+        <activity android:name=".member.activities.RewardMainActivity" />
+        <activity android:name=".member.activities.claimReward" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <meta-data android:name="io.sentry.dsn" android:value="https://9358a1cc0b5c4e988fd646c0f3285ce6@o1065550.ingest.sentry.io/6070533" />
+        <!-- Set tracesSampleRate to 1.0 to capture 100% of transactions for performance monitoring.
+           We recommend adjusting this value in production. -->
+        <meta-data android:name="io.sentry.traces.sample-rate" android:value="1.0" />
+    </application>
+
+</manifest>

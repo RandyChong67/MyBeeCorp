@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ic_insurance"
+        android:icon="@drawable/ic_insurance"
+        android:title="Insurance"/>
+    <item
+        android:id="@+id/ic_referrals"
+        android:icon="@drawable/ic_referrals"
+        android:title="Referrals"/>
+    <item
+        android:id="@+id/ic_reward"
+        android:icon="@drawable/ic_reward"
+        android:title="Reward"/>
+    <item
+        android:id="@+id/ic_user"
+        android:icon="@drawable/ic_user"
+        android:title="My Profile"/>
+
+</menu>

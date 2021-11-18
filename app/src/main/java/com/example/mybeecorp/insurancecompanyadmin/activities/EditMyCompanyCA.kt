@@ -1,0 +1,239 @@
+package com.example.mybeecorp.insurancecompanyadmin.activities
+
+import android.app.AlertDialog
+import android.content.Intent
+import android.net.Uri
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.util.Log
+import android.widget.*
+import com.bumptech.glide.Glide
+import com.example.mybeecorp.R
+import com.example.mybeecorp.classes.DbInsCompany
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.*
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.FirebaseStorage
+import java.util.*
+import java.util.regex.Matcher
+import java.util.regex.Pattern
+
+class EditMyCompanyCA : AppCompatActivity() {
+
+    private lateinit var reference: DatabaseReference
+    private lateinit var database: FirebaseDatabase
+    var instance = FirebaseDatabase.getInstance("https://mybeecorp-cdb46-default-rtdb.asia-southeast1.firebasedatabase.app/")
+
+    private var company_uid:String? = null
+    private var imageUri: Uri? = null
+    private lateinit var InsuranceCompanyName: String
+    private lateinit var company_status: String
+    private lateinit var InsuranceCompanyLogo: ImageView
+
+    private lateinit var InsuranceCompanyStatus: String
+    private lateinit var closeStatus: RadioButton
+    private lateinit var availableStatus: RadioButton
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_edit_my_company_ca)
+        this.supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Edit My Company"
+
+        company_uid = intent.getStringExtra("companyId")
+        val companyName = intent.getStringExtra("companyName")
+        val status = intent.getStringExtra("companyStatus")
+
+        InsuranceCompanyLogo = findViewById(R.id.insuranceCompanyLogo_imageView)
+        val browseIcon: ImageView = findViewById(R.id.Upload_Icon)
+        val insCompanyName: TextView = findViewById(R.id.insuranceCompanyName_EditText)
+        closeStatus = findViewById(R.id.closed_radioButton)
+        availableStatus= findViewById(R.id.AvailableInsurance_radioButton)
+        val cancelBtn: Button = findViewById(R.id.back_button)
+        val saveBtn: Button = findViewById(R.id.save_button)
+
+        loadCompanyLogo()
+        insCompanyName.setText(companyName)
+        if( status== "Available"){
+            availableStatus.isChecked = true
+        }else{
+            closeStatus.isChecked = true
+        }
+
+        //Browse Image
+        browseIcon.setOnClickListener {
+            browseGallery()
+            Log.i("Information", " Icon Clicked.")
+        }
+        //Cancel Button
+        cancelBtn.setOnClickListener{
+            onBackPressed()
+        }
+        //Save Button
+        saveBtn.setOnClickListener{
+            InsuranceCompanyName = insCompanyName.text.toString().trim()
+
+            if (InsuranceCompanyName.isEmpty()){
+                insCompanyName.error = "This field should not be blank."
+                return@setOnClickListener
+            }
+            if(isValid(InsuranceCompanyName){
+                    Log.i("Information", "Input is Valid")
+                })else{
+                insCompanyName.error = "Text entered contains special characters and digit is invalid. "
+                return@setOnClickListener
+            }
+            if (!closeStatus.isChecked && !availableStatus.isChecked) {
+                Toast.makeText(applicationContext, "Please select Insurance Company Status.", Toast.LENGTH_LONG).show()
+                return@setOnClickListener
+            }
+            company_status = if (availableStatus.isChecked) "Available" else "Closed"
+            uploadImages()
+        }
+    }
+
+    fun isValid(str: String, function: () -> Unit): Boolean {
+        var isValid = false
+        val expression = "^[a-z_A-Z ]*$"
+        val inputStr: CharSequence = str
+        val pattern: Pattern = Pattern.compile(expression)
+        val matcher: Matcher = pattern.matcher(inputStr)
+        if (matcher.matches()) {
+            isValid = true
+        }
+        return isValid
+    }
+
+    //Back
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
+    private fun loadCompanyLogo() {
+        var companyRef = instance.getReference("Insurance_Company")
+            .orderByChild("company_uid").equalTo(company_uid).limitToFirst(1)
+            .addListenerForSingleValueEvent(object: ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    if(snapshot.exists()){
+                        for(item in snapshot.children){
+                            Glide.with(InsuranceCompanyLogo.context).load(item.child("company_logo").value.toString()).into(InsuranceCompanyLogo)
+                        }
+                    }else{
+                        Log.e("Error","Unable to retrieve company information.")
+                    }
+                }
+                override fun onCancelled(error: DatabaseError) {
+                    Log.e("Error", "An error has occurred.")
+                }
+            })
+    }
+
+    private fun uploadImages() {
+        val fileName = UUID.randomUUID().toString()
+        val storageReference = FirebaseStorage.getInstance().getReference("ImageInsCompanyLogo/$fileName")
+        if (imageUri != null) {
+            storageReference.putFile(imageUri!!).addOnSuccessListener {
+                //InsuranceCompanyLogo.setImageURI(null)
+                storageReference.downloadUrl.addOnSuccessListener {
+                    Log.i("Info","Testing ")
+                    updateToFirebaseDatabase("${it.toString()}")
+                }
+            }.addOnFailureListener {
+                Toast.makeText(applicationContext, "Failed to upload image.", Toast.LENGTH_SHORT).show()
+            }
+        } else {
+            updateToFirebaseDatabase("")
+        }
+    }
+
+    fun updateToFirebaseDatabase(Url: String) {
+        val builder: android.app.AlertDialog.Builder = android.app.AlertDialog.Builder(this@EditMyCompanyCA)
+        builder.setTitle("Confirmation Message")
+        builder.setMessage("Are you sure to edit?")
+
+        builder.setPositiveButton("Yes") { dialog, which ->
+            val database = Firebase.database("https://mybeecorp-cdb46-default-rtdb.asia-southeast1.firebasedatabase.app/")
+            if (company_uid != null) {
+                reference = database.getReference("/Insurance_Company")
+                if (Url.isEmpty()) {
+                    var data = mutableMapOf<String, Any>("company_name" to InsuranceCompanyName, "company_status" to company_status)
+                    reference.child(company_uid!!).updateChildren(data).addOnSuccessListener {
+                        updateUserCompany()
+                        //Toast.makeText(applicationContext, "Edit Insurance Company information successfully.", Toast.LENGTH_SHORT).show()
+                        val builder = AlertDialog.Builder(this)
+                        builder.setTitle("Message")
+                        builder.setMessage("Edit Insurance Company Information successfully!")
+                        builder.setCancelable(true)
+                        builder.setPositiveButton("OK") { dialog, _ ->
+                            dialog.dismiss()
+                            onBackPressed()
+//                            finish()
+//                            val intent = Intent(this, InsuranceCompanyAdminMainActivity::class.java)
+//                            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+//                            startActivity(intent)
+                        }
+                        val alert = builder.create()
+                        alert.show()
+                    }
+                    return@setPositiveButton
+                } else {
+                    val insuranceCompany = DbInsCompany(company_uid!!, InsuranceCompanyName, Url, company_status)
+                    reference.child(company_uid!!).setValue(insuranceCompany).addOnSuccessListener {
+                        updateUserCompany()
+                        //Toast.makeText(applicationContext, "Edit Insurance Company information successfully.", Toast.LENGTH_SHORT).show()
+                        val builder = AlertDialog.Builder(this)
+                        builder.setTitle("Message")
+                        builder.setMessage("Edit Insurance Company Information successfully!")
+                        builder.setCancelable(true)
+                        builder.setPositiveButton("OK") { dialog, _ ->
+                            dialog.dismiss()
+                            onBackPressed()
+//                            finish()
+//                            val intent = Intent(this, InsuranceCompanyAdminMainActivity::class.java)
+//                            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+//                            startActivity(intent)
+                        }
+                        val alert = builder.create()
+                        alert.show()
+                    }
+                    return@setPositiveButton
+                }
+            } else {
+                Toast.makeText(applicationContext, "Error occur.", Toast.LENGTH_SHORT).show()
+            }
+        }
+        builder.setNegativeButton("No") { dialog, which ->
+            Log.i("Information", "No item had been edited.")
+        }
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
+
+    }
+
+    private fun updateUserCompany() {
+        val uid = FirebaseAuth.getInstance().uid
+        val database = Firebase.database("https://mybeecorp-cdb46-default-rtdb.asia-southeast1.firebasedatabase.app/")
+        reference = database.getReference("User")
+        var data = mutableMapOf<String, Any>("ins_company_name" to InsuranceCompanyName)
+        reference.child(uid!!).updateChildren(data)
+    }
+
+    //Browse Gallery
+    private fun browseGallery() {
+        val intent = Intent()
+        intent.type = "image/*"
+        intent.action = Intent.ACTION_GET_CONTENT
+        startActivityForResult(intent, 100)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == 100 && resultCode == AppCompatActivity.RESULT_OK) {
+            imageUri = data?.data!!
+            InsuranceCompanyLogo.setImageURI(imageUri)
+        }
+    }
+}

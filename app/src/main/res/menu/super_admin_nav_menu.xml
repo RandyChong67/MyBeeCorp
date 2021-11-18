@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ic_insurance"
+        android:icon="@drawable/ic_insurance"
+        android:title="Insurance"/>
+    <item
+        android:id="@+id/ic_users"
+        android:icon="@drawable/ic_referrals"
+        android:title="Users"/>
+    <item
+        android:id="@+id/ic_company"
+        android:icon="@drawable/ic_company"
+        android:title="Company"/>
+    <item
+        android:id="@+id/ic_reward"
+        android:icon="@drawable/ic_reward"
+        android:title="Prizes"/>
+    <item
+        android:id="@+id/ic_vehicle"
+        android:icon="@drawable/ic_vehicle"
+        android:title="Vehicle"/>
+</menu>

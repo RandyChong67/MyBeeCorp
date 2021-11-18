@@ -1,0 +1,369 @@
+<resources>
+    <string name="app_name">MyBeeCorp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="home">Home</string>
+    <string name="insurance">Insurance</string>
+    <string name="referral">Referral</string>
+    <string name="user_profile">User Profile</string>
+    <string name="spin">Spin</string>
+    <string name="spin_wheel">Spin Wheel</string>
+    <string name="test">test</string>
+    <string name="haha">haha</string>
+    <string name="prizes">Prizes</string>
+    <string name="spin_history">Spin History</string>
+    <string name="spin_chances">Your chances:</string>
+    <string name="test_prizes">This is a prizes</string>
+    <string name="spin_history_test">This is Spin History</string>
+    <string name="users">Users</string>
+    <string name="company">Company</string>
+    <string name="vehicle">Vehicle</string>
+    <string name="go_to_vehicle">Go to Vehicle</string>
+    <string name="total_vehicle">Total Vehicle: 30</string>
+    <string name="member">Member 1</string>
+    <string name="insurance_name_1">Insurance Name</string>
+    <string name="view_vehicle">View Vehicle</string>
+    <string name="vehicle_details">Vehicle Details</string>
+    <string name="text_plate_num">ABC6893</string>
+    <string name="insurance_company_name_1">Insurance Company Name</string>
+    <string name="type">Type:</string>
+    <string name="brand">Brand:</string>
+    <string name="model">Model:</string>
+    <string name="variant">Variant:</string>
+    <string name="year">Year:</string>
+    <string name="save">Save</string>
+    <string name="reset">Reset</string>
+    <string name="filter">Filter</string>
+    <string name="payment_gateway">Payment Gateway</string>
+    <string-array name="dummy_spinner_value">
+        <item>test</item>
+        <item>test short</item>
+        <item>test medium length</item>
+        <item>test long length sentence</item>
+        <item>test very fucking long length sentence</item>
+    </string-array>
+
+    <!--    Yang Loo   -->
+    <string name="userRoleSuperAdmin">Super Admin</string>
+    <string name="userSuperAdminCount">Total User(s) : </string>
+    <string name="userRoleInsComAdm">Insurance Company Admin</string>
+    <string name="userRoleMember">Member</string>
+    <string name="userCompany">Company :</string>
+    <string name="userInsComAdmCount">Total User(s) : </string>
+    <string name="userMemberCount">Total User(s) : </string>
+    <string name="userSearch">Search</string>
+    <string name="fullName">Full Name :</string>
+    <string name="phoneNumber">Phone Number :</string>
+    <string name="email">Email :</string>
+    <string name="userRole">User Role :</string>
+    <string name="userStatus">User Status :</string>
+    <string name="statusActive">Active</string>
+    <string name="userPoints">Points :</string>
+    <string name="userSpins">Spins :</string>
+    <string name="userProfileSaveBtn">Save</string>
+    <string name="userName">Full Name</string>
+    <string name="userBankNum">Bank No. :</string>
+    <string name="userBankPIN">Bank PIN :</string>
+    <string name="userOrigPIN">Original Bank PIN</string>
+    <string name="userNewPIN">New Bank PIN</string>
+    <string name="userPassword">Password :</string>
+    <string name="userOrigPassword">Original Password</string>
+    <string name="userNewPassword">New Password</string>
+    <string name="referralList">Referrals</string>
+    <string name="NRIC">NRIC</string>
+    <string name="Password">Password</string>
+    <string name="BankNumber">Bank Number</string>
+    <string name="bankPIN">BankPIN</string>
+    <string name="Insurance">Insurance</string>
+    <string name="Company">Company</string>
+    <string name="User">User</string>
+    <string name="Add">Add</string>
+    <string name="Menu">Menu</string>
+    <string name="UserList">User List</string>
+    <string-array name="UserRole">
+        <item>Super Admin</item>
+        <item>Insurance Company Admin</item>
+        <item>Member</item>
+    </string-array>
+
+    <string-array name="InsuranceClass">
+        <item>Class A</item>
+        <item>Class C</item>
+    </string-array>
+
+    <string-array name="userStatus">
+        <item>Activate</item>
+        <item>Deactivate</item>
+    </string-array>
+
+    <string-array name="InsuranceItemCover">
+        <item>All drivers</item>
+        <item>Wind screen covers</item>
+        <item>Personal accident insurance</item>
+        <item>Others</item>
+    </string-array>
+
+    <!--    Theng Pan  -->
+    <string name="customer_site">Customer Site</string>
+    <string name="my_insurance">My Insurance Tab</string>
+    <string name="insurance_id">Insurance ID:</string>
+    <string name="buy_more_insurance">Buy More Insurance</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="filter_icon">Filter Icon</string>
+    <string name="companylogo">CompanyLogo</string>
+    <string name="company_logo">Company Logo</string>
+    <string name="insurance_id1">Insurance ID:</string>
+    <string name="insurance_name">Insurance Name:</string>
+    <string name="insurance_s_company_name">Insurance\'s Company Name:</string>
+    <string name="vehicle_plate_number">Vehicle Plate Number:</string>
+    <string name="insurance_subscription_status">Insurance Subscription Status:</string>
+    <string name="total_amount_of_yearly_payment">Total Amount of Yearly Payment:</string>
+    <string name="date_of_insurance_bought">Date of Insurance Bought:</string>
+    <string name="Insurance_s_company_name">Insurance\'s Company Name</string>
+    <string name="total_amount_of_yearly_paymentA">Total amount of yearly payment:</string>
+    <string name="total_yearly_payment">Total yearly payment:</string>
+    <string name="insurance_class">Insurance Class:</string>
+    <string name="icon_item_covered_checked">Icon Item Covered Checked</string>
+    <string name="view_more_icon">view More Icon</string>
+    <string name="step_1_select_the_option_s_below">Step 1: Select the option(s) below.</string>
+    <string name="more_information_icon">More Information Icon</string>
+    <string name="confirm_and_proceed">Confirm and Proceed</string>
+    <string name="step_2_fill_in_your_vehicle_details">Step 2: Fill in your vehicle details.</string>
+    <string name="eg_akt5080">Eg.AKT5080</string>
+    <string name="vehicle_type">Vehicle Type:</string>
+    <string name="vehicle_brand">Vehicle Brand:</string>
+    <string name="vehicle_model">Vehicle Model:</string>
+    <string name="vehicle_year">Vehicle Year:</string>
+    <string name="vehicle_variant">Vehicle Variant:</string>
+    <string name="wind_screen_cover">Wind Screen Cover</string>
+    <string name="personal_accidental_death">Personal Accidental Death</string>
+    <string name="loss_or_damage_of_property">Loss or Damage of Property</string>
+    <string name="loss_or_damage_of_own_vehicle">Loss or Damage of Own Vehicle</string>
+    <string name="legal_costs">Legal Costs</string>
+    <string name="car_assessories">Car Assessories</string>
+    <string name="car_accessories">Car Accessories</string>
+    <string name="bodily_injury">Bodily Injury</string>
+    <string name="all_drivers">All Drivers</string>
+    <string-array name="vehicle_year">
+        <item>2000</item>
+        <item>2001</item>
+        <item>2002</item>
+        <item>2003</item>
+        <item>2004</item>
+        <item>2005</item>
+        <item>2006</item>
+        <item>2007</item>
+        <item>2008</item>
+        <item>2009</item>
+        <item>2010</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+    </string-array>
+
+    <string name="company_admin_site">Company Admin Site</string>
+    <string name="insurance_tab">Insurance Tab</string>
+    <string name="insurance_company_tab">Insurance Company Tab</string>
+    <string name="item_covered_tab">Item Covered Tab</string>
+    <string name="insurance_module_insurance_company_module_item_covered_module">Insurance Module, Insurance Company Module, Item Covered Module</string>
+    <string name="insurance_nameCA">Insurance Name:</string>
+    <string name="insurance_company_nameCA">Insurance Company Name:</string>
+    <string name="please_fill_in_the_details_belowCA">Please fill in the details below:</string>
+    <string name="item_covered_nameCA">Item Covered Name:</string>
+    <string name="item_covered_priceCA">Item Covered Price:</string>
+    <string name="item_covered_statusCA">Item Covered Status:</string>
+    <string name="unavailableCA">Unavailable</string>
+    <string name="availableCA">Available</string>
+    <string name="saveCA">Save</string>
+    <string name="backCA">Back</string>
+    <string name="item_covered_id_CA">Item Covered ID:</string>
+    <string name="deleteCA2">Delete</string>
+    <string name="list_of_item_coveredCA">List of Item Covered:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="rmCA2">RM</string>
+    <string name="my_companyCA">My Company</string>
+    <string name="all_insurance_companyCA">All Insurance Company</string>
+    <string name="sort_or_filter_iconCA">Sort Or Filter Icon</string>
+    <string name="add_insurance_button_hereCA">Add Insurance Button Here</string>
+    <string name="view_more_iconCA">View More Icon</string>
+    <string name="add_button_hereCA">Add Button Here</string>
+    <string name="deleteCA">Delete</string>
+    <string name="insurance_item_coveredCA">Insurance Item Covered:</string>
+    <string name="part_bCA">Part B:</string>
+    <string name="insurance_statusCA">Insurance Status:</string>
+    <string name="insuranceclassCA">InsuranceClass:</string>
+    <string name="part_aCA">Part A:</string>
+    <string name="insurance_classCA">Insurance Class:</string>
+    <string name="editCA">Edit</string>
+    <string name="addCA">Add</string>
+    <string name="rmCA">RM</string>
+    <string name="my_company_page_here">My Company Page Here.</string>
+    <string name="all_insurance_company_here">All Insurance Company Here.</string>
+    <string name="insurance_company_logo_pic">Insurance Company Logo Pic</string>
+    <string name="browse_and_upload_pic">Browse and Upload Pic</string>
+    <string name="total_insurances">Total Insurances</string>
+    <string name="insurance_iconCA">Insurance Icon</string>
+    <string name="total_company_adminCA">Total Company Admin</string>
+    <string name="company_admin_iconCA">Company Admin Icon</string>
+    <string name="edit_my_company_infoCA">Edit My Company Info</string>
+    <string name="total_company_insuranceCA">Total Company Insurance</string>
+    <string name="total_insurance_companyCA">Total Insurance Company:</string>
+    <string name="company_logo_image_viewCA">Company Logo Image View</string>
+    <string name="sort_by_alpha_iconCA">Sort By Alpha Icon</string>
+    <string name="company_statusCA">Company Status:</string>
+    <string name="title_activity_edit_my_company">EditMyCompany</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="list_of_insurancesCA">List of Insurances:</string>
+    <string name="total_company_insurances">Total Company Insurances:</string>
+
+    <string name="super_admin_site">Super Admin Site</string>
+    <string name="insurance_module_item_covered_module_insurance_company_module">Insurance Module, Item Covered Module, Insurance Company Module</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="sort_or_filter_icon">Sort or filter icon</string>
+    <string name="part_a">Part A:</string>
+    <string name="insurance_company_name1">Insurance Company Name:</string>
+    <string name="unavailable">Unavailable</string>
+    <string name="insurance_status">Insurance Status:</string>
+    <string name="available">Available</string>
+    <string name="add">Add</string>
+    <string name="part_b">Part B:</string>
+    <string name="insurance_item_covered">Insurance Item Covered:</string>
+    <string name="back">Back</string>
+    <string name="add1">Add</string>
+    <string name="edit1">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="image_of_company_logo">Image of Company Logo</string>
+    <string name="insurance_company_name2">Insurance Company Name:</string>
+    <string name="insurance_item_covered1">Insurance Item Covered</string>
+    <string name="rm">RM</string>
+    <string name="edit">Edit</string>
+    <string name="Edit_item_covered">Item Covered</string>
+    <string name="Edit_item_covered_status">Item Covered Status</string>
+    <string name="edit_list_icon">Edit List Icon</string>
+    <string name="rm1">RM</string>
+    <string name="add_button_here">Add Button Here</string>
+    <string name="add_insurance">Add Insurance</string>
+    <string name="minimalist_icon">Minimalist Icon</string>
+    <string name="please_fill_in_the_detail_below">Please fill in the detail below:</string>
+    <string name="item_covered_name">Item Covered Name:</string>
+    <string name="please_enter_item_covered_name">Please enter item covered name.</string>
+    <string name="item_covered_price">Item Covered Price:</string>
+    <string name="please_enter_item_covered_price">Please enter item covered price.</string>
+    <string name="item_covered_status">Item Covered Status:</string>
+    <string name="item_s_covered">Item(s) Covered:</string>
+    <string name="item_covered_id">Item Covered ID:</string>
+    <string name="list_of_item_covered">List of Item Covered:</string>
+    <string name="company_logo_pic">Company Logo Pic</string>
+    <string name="closed">Closed</string>
+    <string name="insurance_company_status">Insurance Company Status:</string>
+    <string name="insurance_company_name">Insurance Company Name:</string>
+    <string name="insurance_company_logo">Insurance Company Logo:</string>
+    <string name="browse">Browse</string>
+    <string name="insurance_company_logo_picture">Insurance Company Logo Picture</string>
+    <string name="upload_pic_icon">Upload Pic Icon</string>
+    <string name="edit2">Edit</string>
+    <string name="edit_insurance">Edit Insurance</string>
+    <string name="insurance_company_logo_image_viewCA">Insurance Company Logo Image View</string>
+    <string name="please_enter_insurance_company_nameCA">Please enter Insurance Company Name.</string>
+    <string name="resetCA">Reset</string>
+    <string name="please_enter_insurance_nameCA">Please enter insurance name.</string>
+    <string name="wind_screen_coverCA">Wind Screen Cover</string>
+    <string name="personal_accidental_deathCA">Personal Accidental Death</string>
+    <string name="loss_or_damage_of_propertyCA">Loss or Damage of Property</string>
+    <string name="loss_or_damage_of_own_vehicleCA">Loss or Damage of Own Vehicle</string>
+    <string name="legal_costsCA">Legal Costs</string>
+    <string name="car_accessoriesCA">Car Accessories</string>
+    <string name="bodily_injuryCA">Bodily Injury</string>
+    <string name="all_driversCA">All Drivers</string>
+    <string name="part_b_insurance_item_coveredCA">Part B: Insurance Item Covered</string>
+    <string name="part_a_insurance_informationCA">Part A: Insurance Information</string>
+    <string name="list_of_insurance_sSA">List of Insurance(s):</string>
+    <string name="list_of_insurancesSA">List of Insurances:</string>
+    <string name="list_of_insurance_companySA">List of Insurance Company:</string>
+    <string name="total_insurance_companySA">Total Insurance Company:</string>
+    <string name="total_insuranceSA">Total Insurance:</string>
+    <string name="loss_of_damage_of_propertyCA">Loss or Damage of Property</string>
+
+    <!--    fc-->
+    <string name="reward_module">Reward Module</string>
+    <string name="create_Reward">Create Reward</string>
+    <string name="view_Reward">View Reward</string>
+    <string name="title_activity_view_reward">View_Reward</string>
+    <string name="updateReward_title">Update Reward</string>
+    <string name="rewardPoint_">Reward Point : </string>
+    <string name="rewardStatus">Reward Status : </string>
+    <string name="cancelCreateReward_btn">Cancel</string>
+    <string name="createReward_btn">Create</string>
+    <string name="rewardName_hint">Reward Name</string>
+    <string name="rewardPoint_hint">eg: 100</string>
+    <string name="selectRewardImage_btn">Select Image</string>
+    <string name="backUpdateReward_btn">Back</string>
+    <string name="updateReward_btn">Update</string>
+    <string name="update">Update Reward</string>
+    <string name="oldImg">Old Image Url</string>
+    <string name="searchReward">Search Reward: </string>
+    <string name="backCreateReward_btn">Back</string>
+    <string-array name="RewardStatus">
+        <item>Available</item>
+        <item>Unavailable</item>
+    </string-array>
+    <string name="voucher_module">Voucher Module</string>
+    <string name="create_voucher">Create Voucher</string>
+    <string name="view_voucher">View Voucher</string>
+    <string name="update_voucher">Update Voucher</string>
+    <string name="delete_voucher">Delete Voucher</string>
+    <string name="voucher_logo">logo</string>
+    <string name="voucherCode_textview">Voucher Code :</string>
+    <string name="v">Voucher Description</string>
+    <string name="voucherDiscount_textview">Voucher Discount(%) :</string>
+    <string name="voucherDescription_textview">Voucher Description :</string>
+    <string name="expiryDate_textview">Voucher Expiry Date :</string>
+    <string name="voucherStatus_textview">Voucher Status :</string>
+    <string name="createVoucher_title">Create Voucher</string>
+    <string name="selectDate_btn">Select Date</string>
+    <string name="date">Date</string>
+    <string name="cancelCreate_btn">Cancel</string>
+    <string name="createVoucher_btn">Create</string>
+    <string name="voucher_code">eg: HOTDEALS50</string>
+    <string name="back_btn">Back</string>
+    <string name="updateVoucher_btn">Update</string>
+    <string name="voucherCode">voucherCode</string>
+    <string name="voucherExpiryDate">voucherExpiryDate</string>
+    <string name="searchVoucher">Search Voucher</string>
+    <string name="no_insurance_yet">No Insurance Yet</string>
+    <string name="insurance_having_no_available_statusSA">"Insurance having no available status. "</string>
+    <string name="no_records_of_item_coveredCA">No records of item covered.</string>
+    <string-array name="VoucherStatus">
+        <item>Available</item>
+        <item>Unavailable</item>
+        <item>Expired</item>
+    </string-array>
+
+    <string name="getReward_btn">Get</string>
+    <string name="rewardListName">Reward Name</string>
+    <string name="rewardPoint">Reward Point</string>
+    <string name="reward">Reward</string>
+    <string name="helo">Halo,</string>
+    <string name="pointBalanced">Your Point Balanced: </string>
+    <string name="rewardName">Reward Name: </string>
+    <string name="rewardpoint_title">Reward Point: </string>
+    <string name="claim">Claim</string>
+    <string name="myReward">My Reward</string>
+    <string name="no_insurance_company_records">No Insurance Company Records.</string>
+    <string name="no_insurance_records">No Insurance Records</string>
+</resources>
